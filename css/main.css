@@ -1,0 +1,278 @@
+/*Стили для главной страницы (Index) и общие стили для всех страниц*/
+
+html {
+    font-family: 'Rostov', sans-serif;
+}
+
+.body {
+    height: 100%;
+    background-image: url(../img/body.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: RGB(255,255,255,0.6);        
+}
+
+.logo {
+    margin: 0 0 0 34px;
+    height: 125px;
+    width: 193px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.button_add {
+    align-items:center;
+    border: none;    
+    background-color: #3B5EB9;
+    color: #fff;
+    height: 36px;
+    width: 297px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 0;
+}
+
+.button_add:hover {
+    cursor: pointer;
+    background: rgba(59, 94, 185,0.6)
+}
+
+.header_button-add {
+    margin-right: 27px;
+    text-decoration: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.header_button-text {
+    margin: 0;
+}
+.search {
+    height: 125px;
+    display: flex;
+    margin: 41px auto;
+    justify-content: center;
+    align-items: center;
+    width: 870px;
+}
+
+.search_menu {
+    height: 42px;
+    width: 141px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3B5EB9;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.search_block {
+    height: 42px;
+    display: flex;
+    width: calc(100% - 42px);
+    background-color: #3B5EB9;
+    border-radius: 10px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    box-sizing: border-box;
+}
+.input {
+    border-radius: 10px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;    
+    padding-left: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.input:focus {
+    outline: none;
+}
+.search_input {
+    width: calc(100% - 85px);
+}
+.search_button {
+    background-color: #3B5EB9;
+    width: 77px;
+    height: 36px;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 0;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.search_button:hover {
+    cursor: pointer;
+    color: #9db5c4;
+}
+.cards {
+    margin: 0 30px 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 38px;
+}
+
+.card {
+    display: flex;
+    width: 290px;
+    height: 290px;
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(223, 177, 210, 0.82) 0%, rgba(250, 247, 249, 0.46) 100%);
+    box-shadow: 3px 3px 10px 0px #3B5EB9;
+    margin: auto;
+}
+.card_content {
+    margin: 24px 32px;
+}
+.card_immage {
+    background-image: url(../img/img_from_kard.png);
+    width: 226px;
+    height: 161px;
+    background-size: cover;
+    background-position: center;
+}
+.card_name {
+    margin:4px 0 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #3B5EB9;    
+}
+.card_phone {
+    color: #000;
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    margin: 15px 0 8px;
+}
+.card_description {
+    color: #6C7BA0;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.footer {
+    background-color: #3B5EB9;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.footer_link {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid;
+    margin-left: 34px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    
+    
+}
+.footer_link:focus {
+    outline: none;
+}
+/*Стили для страницы Добавить ДУ (Index2)*/
+
+.main {
+    color: #1E1F20;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    width: 878px;
+    margin: 66px auto 0;
+}
+
+.content-add {
+    padding: 42px 42px 42px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #FCFDFF 0%, rgba(250, 247, 249, 0.46) 100%);
+    box-shadow: 3px 3px 10px 0px #3B5EB9;
+}
+.form {
+}
+.checkbox {
+    margin-right: 47px;
+}
+
+.form_input {
+    width: 100%;
+    margin: 22px 0 0;
+}
+.form_photo {
+    display: flex;
+    align-items: center;
+    margin: 22px 0 0px;
+}
+.paragraph-add-photo {
+    margin: 0 8px 0 0;
+}
+
+.form_immage {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    float: left;
+}
+
+.form_immage:hover {
+    cursor: pointer;
+}
+
+.form_button {
+    display: block;
+    margin: 20px auto 0;    
+}
+.footer-add {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/*Стили для страницы Контакты (Index3)*/
+
+.paragraph {
+    margin: 0;
+    background-color: #FCFCFF;
+    border-radius: 4px;
+    margin-bottom: 22px;
+    padding-left: 10px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+.paragraph-text {
+    margin: 0;
+}
+.paragraph-icon {
+    margin: 0;
+}
+.icon {
+    margin-left: 18px;
+}
