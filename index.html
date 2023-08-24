@@ -4,11 +4,10 @@
         <meta charset="UTF-8">
         <title>Дошкольник главная</title>
         <!--Нормализуем стили-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <!--Подключаем собственные стили-->
         <link rel="stylesheet" href="css/main.css">
         <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
-        
+        <script src="script.js"></script>
         <!--Подключаем ШРИФТ-->
         <!--<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">-->
         
@@ -19,116 +18,224 @@ HEADER
 *********************************************-->
         <header class="header">
             <a href="./index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
-            <a href="./index2.html" class="button_add header_button-add"><p class="header_button-text">Добавить учреждение</p></a>
+            <a onclick="openWindowAdd();" class="button_add header_button-add"><p class="header_button-text">Добавить учреждение</p></a>
         </header>
+<!--Слайдер-->
+<div>
+<!-- Контейнер слайдшоу -->
+<div class="slideshow-container">
+<!-- Блок полноразмерных картинок с номерами и текстом -->
+ <div class="mySlides my fade">
+     <div class="numbertext">1 / 4</div>
+     <img src="img/slide/austin-pacheco-FtL07GM9Q7Y-unsplash.jpg" style="width:100%">
+     <div class="text">Веселимся</div>
+ </div>
+ <div class="mySlides fade">
+ <div class="numbertext">2 / 4</div>
+ <img src="img/slide/ben-wicks-iDCtsz-INHI-unsplash.jpg" style="width:100%">
+ <div class="text">Изучаем</div>
+ </div>
+ <div class="mySlides fade">
+ <div class="numbertext">3 / 4</div>
+ <img src="img/slide/bernard-hermant-5zu86kyV_UY-unsplash.jpg" style="width:100%">
+ <div class="text">Создаем</div>
+ </div>
+ <div class="mySlides fade">
+ <div class="numbertext">4 / 4</div>
+ <img src="img/slide/phil-hearing-cylPETXS7is-unsplash.jpg" style="width:100%">
+ <div class="text">Творим</div>
+ </div>
 
+<!-- Кнопки вперед и назад -->
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<!-- точки/круги -->
+<div style="text-align:center">
+ <span class="dot" onclick="currentSlide(1)"></span>
+ <span class="dot" onclick="currentSlide(2)"></span>
+ <span class="dot" onclick="currentSlide(3)"></span>
+ <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+</div>
+<!--Слайдер-->
         <div class="search">
             <!--<button href="#" class="search_menu">Все категории</button>-->
             <div class="search_block">
             <input class="input search_input" placeholder="Наименование ДУ">
-            <button class="search_button">Найти</button>
+            <button class="search_button" onclick="search()">Найти</button>
             </div>
         </div>
-        <main class="cards">
+<main class="cards">
+            <div class="card"  style="display: flex">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Теремок</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Сказка</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Ромашки</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Английская школа</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Вундеркинд</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Счастливый малыш</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Карусель</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Радуга</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Почемучки</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
+            </div>
+            </div>
             <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">B1</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
             </div>
+            <div class="card">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Монтессори</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
             </div>
-                <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
+            <div class="card">
+                <div class="card_content">
+                    <div class="card_immage"></div>
+                    <h1 class="card_name">Жемчужинка</h1>
+                    <p class="card_phone">тел: 65-45-33</p>
+                    <p class="card_description">Детский сад/разв.центр</p>
+                </div>
             </div>
-            </div>
-                <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
-                <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
-                            <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
-                <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
-                <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
-                <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
-                            <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
-                <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
-                <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
-                <div class="card">
-            <div class="card_content">
-                <div class="card_immage"></div>
-                <h1 class="card_name">Название ДУ</h1>
-                <p class="card_phone">тел: 65-45-33</p>
-                <p class="card_description">Детский сад/разв.центр</p>
-            </div>
-            </div>
+
         </main>
+<!--Окошко добавления нового ДУ-->
+            <div id="add" class="add" style="display: none">
+                <div class="content-add">
+                    <form class="form">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox_square">
+                            Детский сад
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox_square">
+                            Развивающий центр
+                        </label>
+                        <input class="input form_input" placeholder="Наименование">
+                        <input class="input form_input" placeholder="Номер телефона">
+                        <input class="input form_input" placeholder="Адрес электронной почты">
+                        <div class="form_photo">
+                            <p class="paragraph-add-photo">Добавить Фото</p>
+                            <button class="form_immage"><img alt="картинка фото" class="photo" src="./img/Image.svg"></button>
+                        </div>
+                        <button href="#" class="button_add form_button">Разместить на сайте</button>
+                        
+                    </form>
+                    <img src="img/close_icon.svg" class="add_closeicon" onclick="closeWindowAdd();">
+                </div>
+            </div>
         <footer class="footer">
             <a href="./index3.html" class="footer_link">Контакты</a>
         </footer>
+<script>
+<!-- Слайд -->
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            <!-- управление вперед/назад -->
+            function plusSlides(n) {
+             showSlides(slideIndex += n);
+            }
+            <!-- контроль картинок -->
+            function currentSlide(n) {
+             showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+             var i;
+             var slides = document.getElementsByClassName("mySlides");
+             var dots = document.getElementsByClassName("dot");
+             if (n > slides.length) {slideIndex = 1}
+             if (n < 1) {slideIndex = slides.length}
+             for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+             }
+             for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" active", "");
+             }
+             slides[slideIndex-1].style.display = "block";
+             dots[slideIndex-1].className += " active";
+            }
+<!-- Поиск по наименованию ДУ -->
+    
+    cardNameArr = document.getElementsByClassName("card_name")    
+    function search() {
+        valueSearch = document.querySelector(".search_input").value
+        var numbCard; 
+        for (numbCard = 0; numbCard < cardNameArr.length; numbCard++) {           
+            if (cardNameArr[numbCard].textContent.includes(valueSearch)) {cardNameArr[numbCard].parentElement.parentElement.style.display = "flex";} else {cardNameArr[numbCard].parentElement.parentElement.style.display = "none";}            
+        }
+    }
+    
+         
+</script>
     </body>
 </html>
