@@ -1,7 +1,22 @@
 /*Стили для главной страницы (Index) и общие стили для всех страниц*/
 
+/*шрифт*/
+@font-face {
+	font-family: "Rostov";
+	src: url("../fonts/rostov/rostov.eot"); 
+    src: url("../fonts/rostov/rostov.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("../fonts/rostov/rostov.otf") format("opentype"), /* Open Type Font */
+		url("../fonts/rostov/rostov.svg") format("svg"), /* Legacy iOS */
+		url("../fonts/rostov/rostov.ttf") format("truetype"), /* Safari, Android, iOS */
+		url("../fonts/rostov/rostov.woff") format("woff"), /* Modern Browsers */
+		url("../fonts/rostov/rostov.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
 html {
     font-family: 'Rostov', sans-serif;
+    height: 100%;
 }
 
 .body {
@@ -11,10 +26,11 @@ html {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
+    margin: 0;
 }
-
+.body_proect {
+    justify-content: space-between;
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -28,9 +44,57 @@ html {
     width: 193px;
 }
 
-.logo:hover {
-    cursor: pointer;
+/*****************Меню************************/
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.link-group{
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.link a{
+    color: #3B5EB9;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: .5s;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.link{
+    margin: 0;
+}
+
+.link a:hover, .link.active a{
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .link a{
+    font-size: 10px;
+}
+
+}
+@media (max-width: 450px) {
+.link a{
+    
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
+}
+
+/********************************************/
 
 .button_add {
     align-items:center;
@@ -65,6 +129,10 @@ html {
 /* ++++++++++++++++++++++++++++++++++
 Контейнер слайдшоу
 +++++++++++++++++++++++++++++++++ */
+.slideshow {
+    margin-top: 20px;
+    height: 100%;
+}
 .slideshow-container {
  max-width: 1000px;
  position: relative;
@@ -303,7 +371,7 @@ hover и цвет заднего фона
     flex-direction: column;
     border-radius: 15px;
     background: linear-gradient(180deg, #FCFDFF 0%, rgba(250, 247, 249, 1) 100%);
-    box-shadow: 3px 3px 10px 0px #3B5EB9;    
+    box-shadow: 3px 3px 10px 0px #3B5EB9;   
     color: #1E1F20;
     font-size: 16px;
     letter-spacing: 1.6px;
@@ -367,7 +435,9 @@ hover и цвет заднего фона
 }
 
 /*Стили для страницы Контакты (Index3)*/
-
+.main {
+    margin-top: 50px;
+}
 .paragraph {
     margin: 0;
     background-color: #FCFCFF;
@@ -386,4 +456,17 @@ hover и цвет заднего фона
 }
 .icon {
     margin-left: 18px;
+}
+
+/*Стили для страницы Контакты (Index1)*/
+/* project-section */
+.project-section {
+    color: #3B5EB9;
+    margin: 20px;
+}
+.project-card {
+    display: flex;
+}
+.project-content {
+    margin-left: 20px;
 }
